@@ -57,7 +57,8 @@ $( document ).ready(function() {
         income.outputMoney = income.outputMoney || moneySum;
         var differencesBetweenMonths = income.calculateFullMonths(initialDate, returnDate);
         income.calculateFullIncome(income.outputMoney, differencesBetweenMonths);
-        alert( "Hi " + userName + ", your income is " + income.outputMoney );
+        var wholeIncome = Math.floor(income.outputMoney);
+        alert( "Hi " + userName + ", your income is " + wholeIncome );
     });
 
     $( "#add_money" ).click(function() {
